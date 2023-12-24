@@ -1,0 +1,43 @@
+{
+    "name": "itau-challenge-back-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc && node dist/app.js --watch",
+        "migrate": "npx prisma migrate dev --create-only",
+        "migrate:apply": "npx prisma migrate dev"
+    },
+    "nodemonConfig": {
+        "script": "app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@prisma/client": "^5.7.1",
+        "body-parser": "^1.20.2",
+        "express": "^4.18.2",
+        "pg": "^8.11.3",
+        "typeorm": "^0.3.17",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.10.5",
+        "@types/pg": "^8.10.9",
+        "@types/uuid": "^9.0.7",
+        "@typescript-eslint/eslint-plugin": "^6.15.0",
+        "@typescript-eslint/parser": "^6.15.0",
+        "eslint": "^8.56.0",
+        "nodemon": "^3.0.2",
+        "prettier": "^3.1.1",
+        "prisma": "^5.7.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    }
+}
